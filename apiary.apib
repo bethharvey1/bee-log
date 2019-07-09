@@ -1,0 +1,62 @@
+FORMAT: 1A
+HOST: https://private-a019c5-beelog.apiary-mock.com/bees
+
+# Bee Log API
+Provides services for the Bee Log app family, recording the world's Bee sightings. 
+
+# Group Bees
+Access to Bee resources
+
+## My Bees [/bees{?page,size}]
+### Get all bee sightings [GET]
+
+    + Parameters
+        + page (required, number, 1 )... page number
+        + size (required, number, 10 )... page size 
+
++ Request
+
+    + Header
+            
+                Authorization: Basic dXNlcjpwYXNzd29yZA==
+                
+
++ Response 200 (application/json)
+    
+        {
+            "page" :
+            {
+                "number" : 1,
+                "size" : 10,
+                "totalPages" : 20
+            },
+            "bees" :
+            [
+                {
+                    "sightedAt": "2019-07-01T07:00",
+                    "imageURL": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjmwrTOzafjAhWNyoUKHdQxB70QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBumblebee&psig=AOvVaw3YovI_Nx7cKWMoK3Cnrcfi&ust=1562753774049054",
+                    "description": "Bee I saw in the morning",
+                    "tags": [
+                        "big"
+                    ]
+                },
+                {
+                    "sightedAt": "2019-06-18T15:24",
+                    "imageURL": "https://media.wired.com/photos/59548378267cf6013d251acb/master/pass/GettyImages-71666555.jpg",
+                    "description": "Queen bee",
+                    "tags": [
+                        "queen bee",
+                        "brown"
+                    ]
+                },
+                {
+                    "sightedAt": "2019-02-15T16:08",
+                    "imageURL": "http://naturemappingfoundation.org/natmap/photos/insects/bumblebee_20070419wc.jpg",
+                    "description": "Bee in the kitchen",
+                    "tags": [
+                        "bumblebee"
+                    ]
+                },
+           
+            ]
+        }
