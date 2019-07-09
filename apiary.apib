@@ -19,44 +19,52 @@ Access to Bee resources
     + Header
             
                 Authorization: Basic dXNlcjpwYXNzd29yZA==
+                x-api-version: 1.0
                 
 
 + Response 200 (application/json)
+
+    + Header
+                
+            ETag : "euyfewuyfvew76f7"
+            cache-control : max-age=600
+
+    + Body 
     
-        {
-            "page" :
             {
-                "number" : 1,
-                "size" : 10,
-                "totalPages" : 20
-            },
-            "bees" :
-            [
+                "page" :
                 {
-                    "sightedAt": "2019-07-01T07:00",
-                    "imageURL": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjmwrTOzafjAhWNyoUKHdQxB70QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBumblebee&psig=AOvVaw3YovI_Nx7cKWMoK3Cnrcfi&ust=1562753774049054",
-                    "description": "Bee I saw in the morning",
-                    "tags": [
-                        "big"
-                    ]
+                    "number" : 1,
+                    "size" : 10,
+                    "totalPages" : 20
                 },
-                {
-                    "sightedAt": "2019-06-18T15:24",
-                    "imageURL": "https://media.wired.com/photos/59548378267cf6013d251acb/master/pass/GettyImages-71666555.jpg",
-                    "description": "Queen bee",
-                    "tags": [
-                        "queen bee",
-                        "brown"
-                    ]
-                },
-                {
-                    "sightedAt": "2019-02-15T16:08",
-                    "imageURL": "http://naturemappingfoundation.org/natmap/photos/insects/bumblebee_20070419wc.jpg",
-                    "description": "Bee in the kitchen",
-                    "tags": [
-                        "bumblebee"
-                    ]
-                },
+                "bees" :
+                [
+                    {
+                        "sightedAt": "2019-07-01T07:00",
+                        "imageURL": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjmwrTOzafjAhWNyoUKHdQxB70QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FBumblebee&psig=AOvVaw3YovI_Nx7cKWMoK3Cnrcfi&ust=1562753774049054",
+                        "description": "Bee I saw in the morning",
+                        "tags": [
+                            "big"
+                        ]
+                    },
+                    {
+                        "sightedAt": "2019-06-18T15:24",
+                        "imageURL": "https://media.wired.com/photos/59548378267cf6013d251acb/master/pass/GettyImages-71666555.jpg",
+                        "description": "Queen bee",
+                        "tags": [
+                            "queen bee",
+                            "brown"
+                        ]
+                    },
+                    {
+                        "sightedAt": "2019-02-15T16:08",
+                        "imageURL": "http://naturemappingfoundation.org/natmap/photos/insects/bumblebee_20070419wc.jpg",
+                        "description": "Bee in the kitchen",
+                        "tags": [
+                            "bumblebee"
+                        ]
+                    },
            
-            ]
-        }
+                ]
+            }
